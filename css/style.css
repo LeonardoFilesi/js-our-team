@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    height: 20%;
+}
+
+.ms_container {
+    width: 100%;
+    height: 20%;
+    background-color: rgb(31, 59, 78);
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 2rem;
+}

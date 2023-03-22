@@ -1,36 +1,46 @@
-// Stabilisco gli ogetti e le loro key
-// E subito incorporo gli oggetti in un Array
+
 const ourTeamMembers = [
     {
         nome : "Wayne Barnett",
         ruolo : "Founder & CEO",
-        foto : "img/wayne-barnett-founder-ceo.jpg",
+        foto : "wayne-barnett-founder-ceo.jpg",
     }, {
         nome : "Angela Caroll",
         ruolo : "Chied Editor",
-        foto : "img/angela-caroll-chief-editor.jpg",
+        foto : "angela-caroll-chief-editor.jpg",
     }, {
         nome : "Walter Gordon",
         ruolo : "Office Menager",
-        foto : "img/walter-gordon-office-menager.jpg",
+        foto : "walter-gordon-office-manager.jpg",
     }, {
         nome : "Angela Lopez",
         ruolo : "Social Media Menager",
-        foto : "img/angela-lopez-social.media.menager.jpg",
+        foto : "angela-lopez-social-media-manager.jpg",
     }, {
         nome : "Scott Estrada",
         ruolo : "Developer",
-        foto : "img/scott-estrada-developer.jpg",
+        foto : "scott-estrada-developer.jpg",
     }, {
         nome : "Barbara Ramos",
         ruolo : "Graphic Designer",
-        foto : "img/barbara-ramos-graphic-designer.jpg",
+        foto : "barbara-ramos-graphic-designer.jpg",
     }
 ];
 
-const container = document.querySelector(".container")
+const container = document.querySelector(".row")
 let cards = "";
 for (let i = 0; i < ourTeamMembers.length; i++) {
     console.log(ourTeamMembers[i]);
     const currentMember = ourTeamMembers[i];
+    cards += 
+    `<div class="col">
+        <div class="card" style="width: 18rem;">
+            <img src="img/${currentMember.foto}" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">${currentMember.nome}</h5>
+                <p class="card-text">${currentMember.ruolo}</p>
+            </div>
+        </div>           
+    </div>`
+    container.innerHTML = cards;
 }
