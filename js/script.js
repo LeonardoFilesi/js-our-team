@@ -1,4 +1,3 @@
-
 const ourTeamMembers = [
     {
         nome : "Wayne Barnett",
@@ -34,7 +33,7 @@ for (let i = 0; i < ourTeamMembers.length; i++) {
     const currentMember = ourTeamMembers[i];
     cards += 
     `<div class="col">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="">
             <img src="img/${currentMember.foto}" class="card-img-top" alt="">
             <div class="card-body">
                 <h5 class="card-title">${currentMember.nome}</h5>
